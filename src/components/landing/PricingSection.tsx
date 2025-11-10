@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, ArrowLeft, Zap } from "lucide-react";
+import { Check, ArrowLeft, Zap, CreditCard, Smartphone, Building2 } from "lucide-react";
 
 const PricingSection = () => {
   return (
@@ -72,10 +72,10 @@ const PricingSection = () => {
               {/* CTA Button */}
               <Button 
                 size="lg" 
-                className="w-full gradient-hero text-xl py-7 shadow-glow hover:scale-105 transition-transform font-bold"
+                className="w-full gradient-hero text-lg py-6 shadow-glow hover:scale-105 transition-transform font-bold"
               >
-                سجل الآن واحصل على الخصم
-                <ArrowLeft className="mr-2 w-6 h-6" />
+                سجل الآن
+                <ArrowLeft className="mr-2 w-5 h-5" />
               </Button>
 
               {/* Guarantee */}
@@ -89,11 +89,22 @@ const PricingSection = () => {
           <div className="mt-8 text-center">
             <p className="text-muted-foreground mb-4">طرق الدفع المتاحة</p>
             <div className="flex items-center justify-center gap-4 flex-wrap">
-              {["💳 بطاقة ائتمان", "💵 مدى", "📱 Apple Pay", "🏦 تحويل بنكي"].map((method) => (
-                <div key={method} className="bg-muted px-4 py-2 rounded-lg text-sm font-medium">
-                  {method}
-                </div>
-              ))}
+              <div className="bg-muted px-5 py-3 rounded-lg flex items-center gap-2 font-medium hover:bg-muted/80 transition-colors">
+                <CreditCard className="w-5 h-5 text-primary" />
+                <span>بطاقة ائتمان</span>
+              </div>
+              <div className="bg-muted px-5 py-3 rounded-lg flex items-center gap-2 font-medium hover:bg-muted/80 transition-colors">
+                <CreditCard className="w-5 h-5 text-secondary" />
+                <span>مدى</span>
+              </div>
+              <div className="bg-muted px-5 py-3 rounded-lg flex items-center gap-2 font-medium hover:bg-muted/80 transition-colors">
+                <Smartphone className="w-5 h-5 text-foreground" />
+                <span>Apple Pay</span>
+              </div>
+              <div className="bg-muted px-5 py-3 rounded-lg flex items-center gap-2 font-medium hover:bg-muted/80 transition-colors">
+                <Building2 className="w-5 h-5 text-accent-foreground" />
+                <span>تحويل بنكي</span>
+              </div>
             </div>
           </div>
         </div>
